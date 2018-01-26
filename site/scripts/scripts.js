@@ -5406,9 +5406,9 @@ $(document).ready(function () {
                         $("#h1").css('color', 'rgb(' + colors[3] + ')')
 
                         $("#swapArtwork").on('click', function () {
-                            console.log('before' + currentAlbum[0].value);
-                            colors.shift();
-                            console.log('after' + currentAlbum[0].value);
+                            console.log('before ' + currentAlbum[0].value);
+                            albums.shift();
+                            console.log('after ' + currentAlbum[0].value);
                         });
                     })
             }, function (err) {
