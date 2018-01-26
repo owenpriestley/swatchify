@@ -1,0 +1,59 @@
+<head>
+    <link rel="stylesheet" href="/resetForms.css">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/markdown.min.js"></script>
+
+</head>
+<html>
+
+<div id="top-container" style="min-height: 200px; height: 20%;">
+    <div id="right" style="float: left;">
+        <h1 class="get" style="color: #004b88">Content</h1>
+        <br>
+        <label for="id">ID</label>
+        <input type="text" id="id">
+        <button type="submit" id="getButt" onclick="getContent()" style="background-color: #fcbb69" method="get">GO</button>
+    </div>
+    <p class="eg" style="padding-top: 50px; border-width: 2px">
+            59e08c6e9d58a8e85432dd10</br>
+            59e08cb89d58a8e85432dd11</br>
+            59e08d059d58a8e85432dd13</br>
+            59e08d479d58a8e85432dd15</br>
+            59e08ce79d58a8e85432dd12</br>
+            59e08d889d58a8e85432dd16</br>
+    </p>
+</div>
+</div>
+</div>
+
+<div id="bottom-container">
+    <div id="bottom-content">
+        <div>
+            <p class="success"></p>
+        </div>
+        <div>
+        <!--    <h2 class="responseTitle"></h2> -->
+            <div id="responseBody"></div>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="helpBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Use Markdown formatting for content -
+                <a href="https://beegit.com/markdown-cheat-sheet">here's a cheat sheet.</a>
+            </p>
+        </div>
+
+    </div>
+
+
+</html>

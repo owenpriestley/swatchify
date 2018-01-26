@@ -1,0 +1,192 @@
+/* CSS Reset */
+#body { margin:0; padding:0; font-size:100%; line-height:1; display: relative;}
+
+h1 {
+    color: #333;
+    font-family: adelle, Adelle, Georgia;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+    font-size: 19pt;
+  
+  }
+
+  .underline {
+    width: 300px;
+    border-bottom: #AFC7B9;
+    border-bottom-style: solid;
+  }
+
+h2 {
+    color: #333;
+    font-family: adelle, Adelle, Georgia;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+    font-size: 19pt;
+}
+
+img {
+  padding-top: 10px;
+  padding-left: 4px;
+  width: 400px;
+  margin-bottom: 5%;
+}
+
+.swatch {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.responseTitle {
+  font-size: 30pt;
+  font-weight: 900;
+  font-family: adelle, Adelle, Georgia;
+  color: #333;
+}
+
+#responseBody {
+  background-color: white;
+  line-height: 1.5;
+  font-family: 'Open sans', sans-serif;
+  font-weight: lighter;
+}
+
+input#submit {
+  background:none;
+  border:none;
+}
+
+input#album {
+  border-style: none;
+  width: 300px;
+  height: 26pt;
+  font-family: adelle, Adelle, Georgia;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+  font-size: 19pt;
+  margin-top: 0.7em;
+  color: #333;
+  border-bottom: #333333ba;
+  border-bottom-style: solid;
+}
+
+input::placeholder {
+  color: #333333ba;
+  font-family: adelle, Adelle, Georgia;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+  font-size: 22pt;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+
+#top-container {
+  color: #333;
+  min-height: 350px;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;  
+  width: 75%;
+  height: 30%;
+  margin:0 auto;
+}
+
+#bottom-container {
+  height: 70%;
+  padding-top: 2%;
+  position: unset;
+  width: 100%;
+  align-content: center;
+  margin: 0 auto;
+}
+
+#left {
+  float: left;
+  padding-left: 7%;
+  padding-right: 7%;
+  width: 30%;
+  height: 100%;
+}
+
+.post {
+  color: #FCA89D;
+}
+
+p.success {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: monospace;
+  text-rendering: optimizeLegibility;
+  font-weight: lighter;
+  background-color: #a1ccb3;
+}
+
+.eg {
+  font-size: 14px;
+  color: #7b7a7a;
+  font-family: monospace
+}
+
+.get {
+  color: #AFC7B9;
+}
+
+#right {
+  float: right;
+  padding-left: 7%;
+  padding-right: 7%;
+  width: 30%;
+  height: 100%;
+}
+
+#bottom-content {
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  width: 50%;
+  margin: 0 auto;
+  float: left;
+  padding-left: 20%;
+  line-height: 120%;
+  color: #333;
+}
+
+/* STYLE HELP WINDOW */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: aliceblue;
+  font-family: 'Open sans', 'sans-serif';
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 10px;
+  /* border: 1px solid #888; */
+  width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #000;
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,74 @@
+<head>
+    <link rel="stylesheet" href="/resetForms.css">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/markdown.min.js"></script>
+    <script src="/scripts/vibrant.js"></script>
+
+</head>
+<html>
+<div id="top-container">
+    <div id='left'>
+        <div id='post'>
+            <input type='text' placeholder="Enter an album" id='album'>
+            <div id="finals">
+                <img id="#albumView" width=200px>
+            </div>
+        </div>
+
+        <div id='postBody'>
+            <button type="submit" id="getArtwork">SEARCH</button>
+            <button type="submit" id="swapArtwork">NEXT</button>
+            </br>
+            <!-- OPTIONAL HELP BUTTON -->
+            <!-- <button type="submit" id="helpButt">HELP</button> -->
+        </div>
+        </br>
+    </div>
+
+    <div id='right'>
+        <div id="finals">
+            <h1 class='get'></h1>
+            <div class="swatch" id="1"></div>
+            <div class="swatch" id="2"></div>
+            <div class="swatch" id="3"></div>
+            <div class="swatch" id="4"></div>
+            <div class="swatch" id="5"></div>
+            <div class="swatch" id="6"></div>
+        </div>
+        <!--<label for='id'>ID</label>
+        <input type='text' id='id'>
+        <button type="submit" id="getButt" onclick="getContent()" method="get">GO</button>
+        <p class='eg'>eg: 59df5aabb56561b0921f9c2d</p> -->
+    </div>
+</div>
+</div>
+<div id="bottom-container">
+    <div id="bottom-content">
+        <div>
+            <p class="success"></p>
+        </div>
+        <div>
+            <h2 class="responseTitle"></h2>
+            <div id="responseBody"></div>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="helpBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Use Markdown formatting for content -
+                <a href="https://beegit.com/markdown-cheat-sheet">here's a cheat sheet.</a>
+            </p>
+        </div>
+
+    </div>
+
+</html>

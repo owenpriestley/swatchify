@@ -1,0 +1,30 @@
+{
+  "name": "pallette",
+  "version": "0.0.1",
+  "description": "Find a pallette from an album",
+  "main": "index.js",
+  "scripts": {
+    "debug": "DEBUG=express:* node server.js",
+    "dev": "nodemon server.js",
+    "login": "npm run build",
+    "build": "~/node/bin/browserify site/scripts/main.js -o site/scripts/scripts.js && npm run dev"
+  },
+  "author": "Owen Priestley",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "jsonq": "^1.1.0",
+    "mongodb": "^2.2.31",
+    "node-spotify-api": "^1.0.7",
+    "node-vibrant": "^3.0.0",
+    "now": "^8.5.4",
+    "request": "^2.83.0",
+    "spotify-web-api-js": "^0.23.0",
+    "spotify-web-api-node": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
