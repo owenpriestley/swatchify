@@ -33,7 +33,7 @@ module.exports = function (app, db) {
   });
 
 
-  /*//Update some content (PUT)
+  //Update some content (PUT)
   app.put('content/:id', (req, res) => {
       const id = req.params.id;
       const details = { '_id': new ObjectID(id) };
@@ -45,9 +45,8 @@ module.exports = function (app, db) {
           res.send(content);
         } 
       });
-    }); */
+    });
   //Delete some content (DELETE) 
-  /*
   app.delete('content/:id', (req, res) => {
       const id = req.params.id;
       const details = { '_id': new ObjectID(id) };
@@ -70,5 +69,5 @@ module.exports = function (app, db) {
        res.send(result.ops[0]);
       }
       });
-    }); */
+    }); 
 }; 
