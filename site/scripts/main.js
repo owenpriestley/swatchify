@@ -4,6 +4,7 @@ var spotifyApi = new SpotifyWebApi();
 
 $(document).ready(function () {
     $("#getArtwork").on('click', function () {
+        $(".finals").hide();
     ////////////////--: GET TOKEN :--///////
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", '/token/', false);
@@ -14,6 +15,7 @@ $(document).ready(function () {
         spotifyApi.setAccessToken(token);
     ////////////////--: GET ARTWORK :--///////
         var searchQuery = $("#album").val();
+        $(".finals").fadeTo(700, 1);
         spotifyApi.searchAlbums(searchQuery)
             .then(function (data) {
                 var albums = data.body.albums.items
