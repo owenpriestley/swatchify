@@ -18,6 +18,10 @@ h1 {
     border-bottom-style: solid;
   }
 
+  .get {
+    margin-bottom: 73px;
+  }
+
 h2 {
     color: #333;
     font-family: 'Open Sans', sans-serif;
@@ -34,23 +38,9 @@ img {
 }
 
 .swatch {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   display: inline-block;
-}
-
-.responseTitle {
-  font-size: 30pt;
-  font-weight: 900;
-  font-family: adelle, Adelle, Georgia;
-  color: #333;
-}
-
-#responseBody {
-  background-color: white;
-  line-height: 1.5;
-  font-family: 'Open sans', sans-serif;
-  font-weight: lighter;
 }
 
 input#submit {
@@ -63,37 +53,41 @@ input#album {
   border-style: none;
   width: 300px;
   height: 26pt;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-rendering: optimizeLegibility;
   font-size: 19pt;
   margin-top: 0.7em;
-  color: #333;
-  border-bottom: #333333ba;
+  color: black;
+  border-bottom: black;
   border-bottom-style: solid;
   letter-spacing: 1.2;
 }
 
 input::placeholder {
-  color: #333333ba;
-  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-family: "Open Sans", sans-serif;
   font-weight: 800;
   text-rendering: optimizeLegibility;
   letter-spacing: 1.2;
   font-size: 22pt;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
 
 #top-container {
   color: #333;
   min-height: 350px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility;  
   width: 75%;
   height: 30%;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 #bottom-container {
@@ -112,30 +106,6 @@ input:focus:-moz-placeholder { color:transparent; }
   width: 30%;
   height: 100%;
 }
-
-.post {
-  color: #FCA89D;
-}
-
-p.success {
-  font-size: 14px;
-  color: #ffffff;
-  font-family: monospace;
-  text-rendering: optimizeLegibility;
-  font-weight: lighter;
-  background-color: #a1ccb3;
-}
-
-.eg {
-  font-size: 14px;
-  color: #7b7a7a;
-  font-family: monospace
-}
-
-.get {
-  color: #AFC7B9;
-}
-
 #right {
   float: right;
   padding-left: 7%;
@@ -145,7 +115,7 @@ p.success {
 }
 
 #bottom-content {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility;
   width: 50%;
   margin: 0 auto;
@@ -167,14 +137,14 @@ p.success {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: aliceblue;
-  font-family: 'Open sans', 'sans-serif';
+  font-family: "Open sans", "sans-serif";
   margin: 15% auto; /* 15% from the top and centered */
   padding: 10px;
   /* border: 1px solid #888; */
