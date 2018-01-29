@@ -1,57 +1,60 @@
-var jsonQ = require('jsonq');
-var SpotifyWebApi = require('spotify-web-api-node');
+var jsonQ = require("jsonq");
+var SpotifyWebApi = require("spotify-web-api-node");
 var spotifyApi = new SpotifyWebApi();
+var rgbToHex = function(rgb) {
+  var hex = Number(rgb).toString(16);
+  if (hex.length < 2) {
+    hex = "0" + hex;
+  }
+  return hex;
+};
 
-$(document).ready(function () {
-    $("#getArtwork").on('click', function () {
-        $(".finals").hide();
+$(document).ready(function() {
+  $("#getArtwork").on("click", function() {
+    $(".finals").hide();
     ////////////////--: GET TOKEN :--///////
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", '/token/', false);
-        xhttp.setRequestHeader("Content-type", "x-www-form-urlencoded");
-        xhttp.send();
-        var response = xhttp.responseText;
-        var token = jsonQ(response).find('token').value();
-        spotifyApi.setAccessToken(token);
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "/token/", false);
+    xhttp.setRequestHeader("Content-type", "x-www-form-urlencoded");
+    xhttp.send();
+    var response = xhttp.responseText;
+    var token = jsonQ(response)
+      .find("token")
+      .value();
+    spotifyApi.setAccessToken(token);
     ////////////////--: GET ARTWORK :--///////
-        var searchQuery = $("#album").val();
-        $(".finals").fadeTo(700, 1);
-        spotifyApi.searchAlbums(searchQuery)
-            .then(function (data) {
-                var albums = data.body.albums.items
-                console.log(albums);
-                var currentAlbum = albums[0].images
-                var currentArtwork = currentAlbum[0].url;
-                console.log(currentAlbum);
-                var img = document.getElementById('#albumView');
-                img.crossOrigin = "Anonymous";
-                img.setAttribute('src', currentArtwork);
-                Vibrant
-                    .from(img)
-                    .getPalette()
-                    .then(function (palette) {
-                        var jsonObj = jsonQ(palette);
-                        colors = jsonObj.find('_rgb').value();
-                        $("#1").css('background-color', 'rgb(' + colors[0] + ')')
-                        $("#2").css('background-color', 'rgb(' + colors[1] + ')')
-                        $("#3").css('background-color', 'rgb(' + colors[2] + ')')
-                        $("#4").css('background-color', 'rgb(' + colors[3] + ')')
-                        $("#5").css('background-color', 'rgb(' + colors[4] + ')')
-                        $("#6").css('background-color', 'rgb(' + colors[5] + ')')
-                        $("#h1").css('color', 'rgb(' + colors[3] + ')')
-
-                        $("#swapArtwork").on('click', function () {
-                            console.log('before ' + currentAlbum[0].value);
-                            albums.shift();
-                            console.log('after ' + currentAlbum[0].value);
-                        });
-                    })
-            }, function (err) {
-                console.error(err);
-            });
-            $(".get").text('Palette');
-            $("h1").addClass('underline');
-    });
+    var searchQuery = $("#album").val();
+    $(".finals").fadeTo(700, 1);
+    spotifyApi.searchAlbums(searchQuery).then(
+      function(data) {
+        var albums = data.body.albums.items;
+        var currentAlbum = albums[0].images;
+        var currentArtwork = currentAlbum[0].url;
+        var img = document.getElementById("#albumView");
+        img.crossOrigin = "Anonymous";
+        img.setAttribute("src", currentArtwork);
+        Vibrant.from(img)
+          .getPalette()
+          .then(function(palette) {
+            var jsonObj = jsonQ(palette);
+            colors = jsonObj.find("_rgb").value();
+            $("#1").css("background-color", "rgb(" + colors[0] + ")");
+            $("#2").css("background-color", "rgb(" + colors[1] + ")");
+            $("#3").css("background-color", "rgb(" + colors[2] + ")");
+            $("#4").css("background-color", "rgb(" + colors[3] + ")");
+            $("#5").css("background-color", "rgb(" + colors[4] + ")");
+            $("#6").css("background-color", "rgb(" + colors[5] + ")");
+            $(".get").css("color", "rgb(" + colors[3] + ")");
+            $(".underline").css("border-color", "rgb(" + colors[3] + ")");
+          });
+      },
+      function(err) {
+        console.error(err);
+      }
+    );
+    $(".get").text("Palette");
+    $("h1").addClass("underline");
+  });
 });
 
 /* MODAL HELP, IF YA WANNIT

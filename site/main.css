@@ -3,7 +3,8 @@
 
 h1 {
     color: #333;
-    font-family: adelle, Adelle, Georgia;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.2;
     font-weight: 800;
     text-rendering: optimizeLegibility;
     font-size: 19pt;
@@ -19,7 +20,7 @@ h1 {
 
 h2 {
     color: #333;
-    font-family: adelle, Adelle, Georgia;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     text-rendering: optimizeLegibility;
     font-size: 19pt;
@@ -61,7 +62,7 @@ input#album {
   border-style: none;
   width: 300px;
   height: 26pt;
-  font-family: adelle, Adelle, Georgia;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   text-rendering: optimizeLegibility;
   font-size: 19pt;
@@ -69,13 +70,15 @@ input#album {
   color: #333;
   border-bottom: #333333ba;
   border-bottom-style: solid;
+  letter-spacing: 1.2;
 }
 
 input::placeholder {
   color: #333333ba;
-  font-family: adelle, Adelle, Georgia;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   text-rendering: optimizeLegibility;
+  letter-spacing: 1.2;
   font-size: 22pt;
 }
 
@@ -85,7 +88,7 @@ input:focus:-moz-placeholder { color:transparent; }
 #top-container {
   color: #333;
   min-height: 350px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-rendering: optimizeLegibility;  
   width: 75%;
   height: 30%;

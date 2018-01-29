@@ -154,14 +154,28 @@ input[type="reset"],
 input[type="button"],
 input[type="submit"]
 {
-    border-width: 0px;
-    background-color: #c3d7e8;
+	border-width: 0px;
+    background-color: #0080009e;
     font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    font-style: italic;
     padding: 4px 7px 2px 7px;
-    font-weight: 500;
-	/* Fix IE7 display bug */
-    overflow:visible;
-    width:auto;
+    /* font-weight: 500; */
+    overflow: visible;
+    width: 25px;
+    height: 25px;
+    display: block;
+    /* color: black; */
+    border-radius: 50%;
+    text-rendering: optimizeLegibility;
+}
+button:focus, 
+button:hover {
+	outline:0;
+	cursor: pointer;
+	text-decoration: underline;
+
 }
 
 /* IE8 and FF freak out if this rule is within another selector */
