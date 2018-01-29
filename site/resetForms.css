@@ -157,18 +157,19 @@ input[type="submit"]
 	border-width: 0px;
     background-color: #0080009e;
     font-family: 'Roboto', sans-serif;
-    font-size: 11pt;
+    font-size: 12pt;
     font-weight: bold;
     font-style: italic;
     padding: 4px 7px 2px 7px;
     /* font-weight: 500; */
     overflow: visible;
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     display: block;
     /* color: black; */
     border-radius: 50%;
-    text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	margin-top: 14px;
 }
 button:focus, 
 button:hover {

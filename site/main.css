@@ -59,6 +59,7 @@ input#submit {
 }
 
 input#album {
+  margin-bottom: 0;
   border-style: none;
   width: 300px;
   height: 26pt;
