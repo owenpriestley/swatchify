@@ -5419,7 +5419,7 @@ $(document).ready(function() {
         console.error(err);
       }
     );
-    $(".get").text("Palette");
+    $(".get").text("Swatches");
     $("h1").addClass("underline");
   });
 });
