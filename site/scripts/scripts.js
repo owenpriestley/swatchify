@@ -5368,13 +5368,6 @@ module.exports = request;
 var jsonQ = require("jsonq");
 var SpotifyWebApi = require("spotify-web-api-node");
 var spotifyApi = new SpotifyWebApi();
-var rgbToHex = function(rgb) {
-  var hex = Number(rgb).toString(16);
-  if (hex.length < 2) {
-    hex = "0" + hex;
-  }
-  return hex;
-};
 
 $(document).ready(function() {
   $("#getArtwork").on("click", function() {
@@ -5403,7 +5396,7 @@ $(document).ready(function() {
         Vibrant.from(img)
           .getPalette()
           .then(function(palette) {
-            var jsonObj = jsonQ(palette);
+            var jsonObj = jsonQ(palette.getHex());
             colors = jsonObj.find("_rgb").value();
             $("#1").css("background-color", "rgb(" + colors[0] + ")");
             $("#2").css("background-color", "rgb(" + colors[1] + ")");

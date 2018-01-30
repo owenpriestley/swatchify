@@ -1,13 +1,6 @@
 var jsonQ = require("jsonq");
 var SpotifyWebApi = require("spotify-web-api-node");
 var spotifyApi = new SpotifyWebApi();
-var rgbToHex = function(rgb) {
-  var hex = Number(rgb).toString(16);
-  if (hex.length < 2) {
-    hex = "0" + hex;
-  }
-  return hex;
-};
 
 $(document).ready(function() {
   $("#getArtwork").on("click", function() {
