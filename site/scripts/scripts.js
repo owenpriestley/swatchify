@@ -5396,14 +5396,13 @@ $(document).ready(function() {
         Vibrant.from(img)
           .getPalette()
           .then(function(palette) {
-            var jsonObj = jsonQ(palette.getHex());
+            var jsonObj = jsonQ(palette);
             colors = jsonObj.find("_rgb").value();
-            $("#1").css("background-color", "rgb(" + colors[0] + ")");
-            $("#2").css("background-color", "rgb(" + colors[1] + ")");
-            $("#3").css("background-color", "rgb(" + colors[2] + ")");
-            $("#4").css("background-color", "rgb(" + colors[3] + ")");
-            $("#5").css("background-color", "rgb(" + colors[4] + ")");
-            $("#6").css("background-color", "rgb(" + colors[5] + ")");
+
+            for(i=0; i<colors.length; i++){
+            $("#"+i).css("background-color", "rgb(" + colors[i] + ")");
+            }
+            
             $(".get").css("color", "rgb(" + colors[3] + ")");
             $(".underline").css("border-color", "rgb(" + colors[3] + ")");
           });
