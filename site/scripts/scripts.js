@@ -5370,6 +5370,9 @@ var SpotifyWebApi = require("spotify-web-api-node");
 var spotifyApi = new SpotifyWebApi();
 
 $(document).ready(function() {
+  for(i=0; i<6; i++){
+    $("#palette").append("<div class='swatch' id='"+i+"'></div>");
+  }
   $("#getArtwork").on("click", function() {
     $(".finals").hide();
     ////////////////--: GET TOKEN :--///////
@@ -5398,11 +5401,10 @@ $(document).ready(function() {
           .then(function(palette) {
             var jsonObj = jsonQ(palette);
             colors = jsonObj.find("_rgb").value();
-
+            
             for(i=0; i<colors.length; i++){
             $("#"+i).css("background-color", "rgb(" + colors[i] + ")");
             }
-            
             $(".get").css("color", "rgb(" + colors[3] + ")");
             $(".underline").css("border-color", "rgb(" + colors[3] + ")");
           });
