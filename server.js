@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('site'));
 app.use('/js/', express.static(__dirname + '/node_modules/'));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000), () => {
     require('./app/routes')(app,);
     console.log('Stayin alive on port ' + port);
 });
