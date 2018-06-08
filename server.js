@@ -16,4 +16,4 @@ app.use('/js/', express.static(__dirname + '/node_modules/'));
 app.listen(process.env.PORT || 5000), () => {
     require('./app/routes')(app,);
     console.log('Stayin alive on port ' + port);
-});
+};
