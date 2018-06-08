@@ -7,13 +7,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./config/db');
 const app = express();
-const port = 8000;
+const port = 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('site'));
 app.use('/js/', express.static(__dirname + '/node_modules/'));
-
-app.listen(process.env.PORT || 5000), () => {
+app.listen(process.env.PORT || port, () => {
     require('./app/routes')(app,);
     console.log('Stayin alive on port ' + port);
-};
+});
