@@ -11,19 +11,19 @@
   "author": "Owen Priestley",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "dotenv": "^4.0.0",
-    "express": "^4.16.2",
+    "express": "^4.16.3",
     "jsonq": "^1.1.0",
-    "mongodb": "^2.2.31",
+    "mongodb": "^2.2.35",
     "node-spotify-api": "^1.0.7",
     "node-vibrant": "^3.0.0",
     "now": "^8.5.4",
-    "request": "^2.83.0",
+    "request": "^2.87.0",
     "spotify-web-api-js": "^0.23.0",
     "spotify-web-api-node": "^2.5.0"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.17.5"
   }
 }
