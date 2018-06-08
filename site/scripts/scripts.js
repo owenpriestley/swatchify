@@ -5370,6 +5370,11 @@ var SpotifyWebApi = require("spotify-web-api-node");
 var spotifyApi = new SpotifyWebApi();
 
 $(document).ready(function() {
+  $("#album").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#getArtwork").click();
+    }
+  });
   for(i=0; i<6; i++){
     $("#palette").append("<div class='swatch' id='"+i+"'></div>");
   }
