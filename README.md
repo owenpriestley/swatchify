@@ -6,4 +6,4 @@ Built in Node.js, Swatchify takes an album of your choice and gives you a corres
 
 It's powered by [node-vibrant](https://github.com/akfish/node-vibrant/) and uses the Spotify API.
 
-**[Try it out](http://swatchify.now.sh)**
+**[Try it out](http://swatchify.herokuapp.com/)**
